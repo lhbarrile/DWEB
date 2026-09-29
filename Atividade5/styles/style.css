@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    /* width: 400px; */
+    min-width: 100%;
+    background-color: blue;
+}
+
+.box h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
+
+.box h2::before {
+    content: "Azul";
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+    .box {
+        background-color: orange;
+    }
+
+    .box h2::before {
+        content: "Laranja";
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .box {
+        background-color: rgb(212, 7, 48);
+    }
+
+    .box h2::before {
+        content: "Rosa";
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .box {
+        background-color: #E06665;
+    }
+
+    .box h2::before {
+        content: "Vermelho";
+    }
+}
+
+@media (min-width: 1081px) and (max-width: 1366px) {
+    .box {
+        background-color: rgb(54, 47, 83);
+    }
+
+    .box h2::before {
+        content: "Roxo";
+    }
+}
+
+@media (min-width: 1367px) and (max-width: 1920px) {
+    .box {
+        background-color: rgb(255, 234, 5);
+    }
+
+    .box h2::before {
+        content: "Amarelo";
+    }
+}
+
+@media (min-width: 1921px) {
+    .box {
+        background-color: green;
+    }
+
+    .box h2::before {
+        content: "Verde";
+    }
+}
