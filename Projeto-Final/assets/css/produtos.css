@@ -1,0 +1,109 @@
+@import url('style.css');
+
+.btn-verde {
+    background-color: var(--verde);
+    color: var(--branco);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: var(--opens-sans);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-verde:hover {
+    background-color: var(--verde-escuro);
+    transition: .3s ease;
+}
+
+.btn-editar {
+    background-color: var(--verde);
+    color: var(--branco);
+    border: none;
+    width: 80%;
+    padding: 10px 5px;
+    font-family: var(--opens-sans);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background-color: var(--verde-escuro);
+    transition: .3s ease;
+}
+
+
+.alert {
+    display: none;
+    background-color: rgba(255, 149, 149, 0.514);
+    font-family: var(--opens-sans);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.alert.on {
+    display: block;
+}
+
+.inputs {
+    margin: 30px;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1.5px solid #000;
+    border-radius: 8px;
+    background-color: var(--branco);
+    font-size: 15px;
+}
+
+.btn-adicionar,
+.btn-salvar, 
+.btn-excluir,
+.btn-cancelar {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    margin: 15px auto 0;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    color: var(--branco);
+    font-family: var(--opens-sans);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--verde);
+}
+
+.btn-excluir {
+    background-color: red;    
+}
+
+.btn-cancelar {
+    background-color: #8a8a8a;
+}
+
+.texto-excluir {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 25px 0 15px;
+}
+
+.texto-aviso {
+  text-align: center;
+  font-size: 13px;
+  color: #888888;
+  margin-bottom: 20px;
+}

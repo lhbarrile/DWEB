@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/estoque.css">
+    <title>GMS - Human Nutrition</title>
+</head>
+<body>
+    
+    <div class="tela">
+        <main class="conteudo">
+            <h1 class="titulo">Estoque</h1>
+
+            <div class="tabela-container">
+                <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Tamanho</th>
+                            <th>Valor</th>
+                            <th>Estoque Total</th>
+                            <th>Lotes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-estoque">
+                        <tr>
+                            <td>NAC</td>
+                            <td>60 CPS</td>
+                            <td>R$30,99</td>
+                            <td>67</td>
+                            <td><button class="btn-ver-mais" onclick="abrirModal('modal-nac60')">VER MAIS</button></td>
+                        </tr>
+                        <tr>
+                            <td>NAC</td>
+                            <td>120 CPS</td>
+                            <td>R$66,99</td>
+                            <td>130</td>
+                            <td><button class="btn-ver-mais" onclick="abrirModal('modal-nac120')">VER MAIS</button></td>
+                        </tr>
+                        <tr>
+                            <td>Creatina</td>
+                            <td>300g</td>
+                            <td>R$80,50</td>
+                            <td>42</td>
+                            <td><button class="btn-ver-mais" onclick="abrirModal('modal-creatina')">VER MAIS</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        
+        <aside class="barra-lateral">
+            <div class="logo">
+                <h1>GMS</h1>
+                <h2>Human Nutrition</h2>
+            </div>
+            <div class="linha-logo"></div>
+            <nav>
+                <a href="./produtos.html">Produtos</a>
+                <a href="estoque.html" class="ativo">Estoque</a>
+                <a href="#">Integração</a>
+                <a href="#">Entrada de mercadorias</a>
+                <a href="#">Saída de mercadorias</a>
+                <a href="#">Usuários</a>
+            </nav>
+        </aside>
+    </div>    
+    
+    <div class="fundo" id="modal-nac60">
+        <div class="content-modal">
+            <button class="fechar" onclick="fecharModal('modal-nac60')"><img src="./assets/img/excluir.png" alt="" width="30px" height="30px"></button>
+            <h3>Lotes</h3>
+            <p>NAC 60 cápsulas</p>
+
+            <div class="tabela-container">
+                <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Lote</th>
+                            <th>Data de Entrada</th>
+                            <th>Validade</th>
+                            <th>Quantidade</th>
+                            <th>Disponível</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>150525</td>
+                            <td>15/05/26</td>
+                            <td>31/01/2027</td>
+                            <td>48 un.</td>
+                            <td>42 un.</td>
+                            <td>R$29,90</td>
+                        </tr>
+                        <tr>
+                            <td>220525</td>
+                            <td>22/06/26</td>
+                            <td>04/03/2027</td>
+                            <td>35 un.</td>
+                            <td>25 un.</td>
+                            <td>R$29,90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>         
+    </div>
+
+    <div class="fundo" id="modal-nac120">
+        <div class="content-modal">
+            <button class="fechar" onclick="fecharModal('modal-nac120')"><img src="./assets/img/excluir.png" alt="" width="30px" height="30px"></button>
+            <h3>Lotes</h3>
+            <p>NAC 120 cápsulas</p>
+
+            <div class="tabela-container">
+                <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Lote</th>
+                            <th>Data de Entrada</th>
+                            <th>Validade</th>
+                            <th>Quantidade</th>
+                            <th>Disponível</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100625</td>
+                            <td>10/06/26</td>
+                            <td>15/05/2027</td>
+                            <td>80 un.</td>
+                            <td>55 un.</td>
+                            <td>R$32,90</td>
+                        </tr>
+                        <tr>
+                            <td>150625</td>
+                            <td>15/06/26</td>
+                            <td>20/06/2027</td>
+                            <td>70 un.</td>
+                            <td>25 un.</td>
+                            <td>R$32,90</td>
+                        </tr>
+                        <tr>
+                            <td>200725</td>
+                            <td>20/07/26</td>
+                            <td>10/08/2027</td>
+                            <td>50 un.</td>
+                            <td>50 un.</td>
+                            <td>R$32,90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+            
+    </div>
+    <div class="fundo" id="modal-creatina">
+        <div class="content-modal">
+            <button class="fechar" onclick="fecharModal('modal-creatina')"><img src="./assets/img/excluir.png" alt="" width="30px" height="30px"></button>
+            <h3>Lotes</h3>
+            <p>Creatina 300 gramas</p>
+
+            <div class="tabela-container">
+                <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Lote</th>
+                            <th>Data de Entrada</th>
+                            <th>Validade</th>
+                            <th>Quantidade</th>
+                            <th>Disponível</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>060625</td>
+                            <td>06/06/26</td>
+                            <td>20/09/2027</td>
+                            <td>80 un.</td>
+                            <td>42 un.</td>
+                            <td>R$80,90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+            
+    </div>
+
+    <script src="produtos.js"></script>
+</body>
+</html>

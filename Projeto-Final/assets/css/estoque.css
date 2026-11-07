@@ -1,0 +1,28 @@
+@import url('style.css');
+
+.titulo {
+    margin-bottom: 50px;
+}
+
+
+.btn-ver-mais { 
+    background-color: var(--verde);
+    color: var(--branco);
+    border: none;
+    border-radius: 10px;
+    width: 60%;
+    padding: 10px 5px;
+    font-family: var(--opens-sans);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-ver-mais:hover {
+    background-color: var(--verde-escuro);
+    transition: .3s ease;
+}
+
+.content-modal {
+    width: 700px;
+}

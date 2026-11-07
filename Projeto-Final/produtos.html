@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/produtos.css">
+    <title>GMS - Human Nutrition</title>
+</head>
+<body>
+    
+    <div class="tela">
+        <main class="conteudo">
+            <h1 class="titulo">Produtos</h1>
+
+            <button class="btn-verde" onclick="abrirModal('modal-adicionar')">+ Adicionar produtos</button>
+
+            <div class="tabela-container">
+                <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Tamanho</th>
+                            <th>Valor</th>
+                            <th>Estoque Mínimo</th>
+                            <th>Local</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-produtos"></tbody>
+                </table>
+            </div>
+        </main>
+        
+        <aside class="barra-lateral">
+            <div class="logo">
+                <h1>GMS</h1>
+                <h2>Human Nutrition</h2>
+            </div>
+            <div class="linha-logo"></div>
+            <nav>
+                <a href="./produtos.html" class="ativo">Produtos</a>
+                <a href="/estoque.html">Estoque</a>
+                <a href="#">Integração</a>
+                <a href="#">Entrada de mercadorias</a>
+                <a href="#">Saída de mercadorias</a>
+                <a href="#">Usuários</a>
+            </nav>
+        </aside>
+    </div>
+
+    <div class="fundo " id="modal-adicionar">
+        <div class="content-modal">
+            <button class="fechar" onclick="fecharModal('modal-adicionar')"><img src="./assets/img/excluir.png" alt="" width="30px" height="30px"></button>
+            <h3>Adicionar Produto</h3>
+            
+            <div class="alert" id="msg-erro">
+                <p>Preencha Todos os Campos</p>
+            </div>
+            
+            <div class="inputs">
+                <label>Produto</label>
+                <input type="text" id="add-nome" placeholder="EX: NAC">
+            </div>
+            <div class="inputs">
+                <label>Tamanho</label>
+                <input type="text" id="add-tamanho" placeholder="EX: 120 cps">
+            </div>
+            <div class="inputs">
+                <label>Valor</label>
+                <input type="text" id="add-valor" placeholder="R$ 0,00">
+            </div>
+            <div class="inputs">
+                <label>Estoque Mínimo</label>
+                <input type="text" id="add-minimo" placeholder="EX: 30">
+            </div>
+            <div class="inputs">
+                <label>Local</label>
+                <input type="text" id="add-local" placeholder="EX: Prateleira A3">
+            </div>
+            
+            <button class="btn-adicionar" onclick="adicionarProduto()">+ Adicionar</button>
+        </div>
+    </div>
+    
+    <div class="fundo" id="modal-editar">
+        <div class="content-modal">
+            <button class="fechar" onclick="fecharModal('modal-editar')"><img src="./assets/img/excluir.png" alt="" width="30px" height="30px"></button>
+            <h3>Editar Produto</h3>
+            
+            <div class="alert" id="msg-erro-edit">
+                <p>Preencha Todos os Campos</p>
+            </div>
+
+            <div class="inputs">
+                <label>Produto</label>
+                <input type="text" id="edit-nome" placeholder="EX: NAC">
+            </div>
+            <div class="inputs">
+                <label>Tamanho</label>
+                <input type="text" id="edit-tamanho" placeholder="EX: 120 cps">
+            </div>
+            <div class="inputs">
+                <label>Valor</label>
+                <input type="text" id="edit-valor" placeholder="R$ 0,00">
+            </div>
+            <div class="inputs">
+                <label>Estoque Mínimo</label>
+                <input type="text" id="edit-minimo" placeholder="EX: 30">
+            </div>
+            <div class="inputs">
+                <label>Local</label>
+                <input type="text" id="edit-local" placeholder="EX: Prateleira A3">
+            </div>
+
+            <button class="btn-salvar" onclick="salvarEdicao()">Salvar</button>
+            <button class="btn-excluir" onclick="excluirProduto()">Excluir</button>
+        </div>
+    </div>
+
+    <div class="fundo" id="modal-excluir">
+        <div class="content-modal">
+            <h3>Excluir produto</h3>
+
+            <p class="texto-excluir" id="texto-excluir"></p>
+            <p class="texto-aviso">Esta ação não pode ser desfeita.</p>
+
+            <button class="btn-cancelar" onclick="fecharModal('modal-excluir')">Cancelar</button>
+            <button class="btn-excluir" onclick="salvarExclusao()">Deletar</button>
+        </div>
+  </div>
+
+  <script src="./produtos.js"></script>
+
+</body>
+</html>
