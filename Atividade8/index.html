@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Opinião</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Pesquisa de Opinião</h1>
+
+        <p>Pesquisa realizada com 45 pessoas sobre o lançamento de um filme.</p>
+
+        <h2>Dados da pessoa</h2>
+
+        <label>Idade:</label>
+        <input type="number" id="idade" placeholder="Digite a idade" min="1">
+
+        <label>Sexo:</label>
+        <select id="sexo">
+            <option value="">Selecione</option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="outros">Outros</option>
+        </select>
+
+        <label>Opinião:</label>
+        <select id="opiniao">
+            <option value="">Selecione</option>
+            <option value="4">Ótimo</option>
+            <option value="3">Bom</option>
+            <option value="2">Regular</option>
+            <option value="1">Péssimo</option>
+        </select>
+
+        <button onclick="adicionarPessoa()">Adicionar pessoa</button>
+
+        <p id="contador">Pessoas cadastradas: 0 / 45</p>
+
+        <section id="resultado">
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
